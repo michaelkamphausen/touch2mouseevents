@@ -1,4 +1,4 @@
-When the user swipes with his finger over a website with a mobile Webkit browser, it fires touchstart, touchmove and touchend events first and and according to the finger movement. After the finger left the screen and an extra delay, the mobile browser fires mousedown, a single mousemove, mouseup and click legacy events. If actions on your website or web app depend on mousedown, mousemove and mouseup events, these actions will be executed far too late causing a strange behaviour.
+When the user swipes with his finger over a website with a mobile Webkit browser, it fires touchstart, touchmove and touchend events first according to the finger movement. After the finger left the screen and an extra delay, the mobile browser fires mousedown, a single mousemove, mouseup and click legacy events. If actions on the website or web app depend on mousedown, mousemove and mouseup events, these actions will be executed far too late causing a strange behaviour.
 
 touch2mouseevents.js rewrites the DOM addEventListener methods to map listeners for mousedown, mousemove and mouseup events to touchstart, touchmove and touchend events, so that the listener actions are executed in time and the delayed mobile browser legacy events are ignored. A sequence of taps can be detected, too, allowing double or triple click actions.
 
@@ -10,4 +10,4 @@ The script file needs to be loaded before the mouse event listeners are register
 
 # License
 
-jsCalendar is licensed under the terms of the MIT License.
+touch2mouseevents is licensed under the terms of the MIT License.
